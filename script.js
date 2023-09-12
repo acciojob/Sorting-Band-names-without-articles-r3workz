@@ -16,3 +16,12 @@ touristSpots.sort((a,b)=>{
     }
     return a.toLowerCase().localeCompare(b.toLowerCase())
 })
+
+document.addEventListener("DOMContentLoaded",()=>{
+    const bandUl=document.getElementById("band")
+touristSpots.map((spot)=>{
+    const item = document.createElement("li")
+    item.innerText=spot
+    bandUl.append(item)
+})
+})
